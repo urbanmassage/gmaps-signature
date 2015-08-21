@@ -1,5 +1,6 @@
 # Google Maps Signature
-[![Circle CI](https://circleci.com/gh/louy/gmaps-signature.svg?style=svg)](https://circleci.com/gh/louy/gmaps-signature)
+[![Circle CI](https://img.shields.io/circleci/project/louy/gmaps-signature.svg)](https://circleci.com/gh/louy/gmaps-signature)
+[![NPM](https://img.shields.io/npm/v/gmaps-signature.svg)](https://www.npmjs.com/package/gmaps-signature)
 
 Signs Google Maps requests. Works with both general and Google Maps for Work.
 
