@@ -1,4 +1,5 @@
 # Google Maps Signature
+[![Circle CI](https://circleci.com/gh/louy/gmaps-signature.svg?style=svg)](https://circleci.com/gh/louy/gmaps-signature)
 
 Signs Google Maps requests. Works with both general and Google Maps for Work.
 
