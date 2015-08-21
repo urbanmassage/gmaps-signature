@@ -1,0 +1,30 @@
+{
+  "name": "gmaps-signature",
+  "version": "1.0.0",
+  "description": "Signs Google Maps requests. Works with both general and Google Maps for Work.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "coverage": "istanbul cover _mocha"
+  },
+  "author": "Louay Alakkad <louay@alakkad.me>",
+  "license": "LGPL-3.0",
+  "keywords": [
+    "gmaps",
+    "sign",
+    "signature",
+    "api",
+    "google"
+  ],
+  "dependencies": {
+    "crypto": "0.0.3",
+    "querystring": "^0.2.0"
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.18",
+    "mocha": "^2.2.5"
+  }
+}
