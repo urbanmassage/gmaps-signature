@@ -25,6 +25,15 @@
   },
   "devDependencies": {
     "istanbul": "^0.3.18",
-    "mocha": "^2.2.5"
-  }
+    "mocha": "^2.2.5",
+    "mocha-junit-reporter": "^1.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louy/gmaps-signature.git"
+  },
+  "bugs": {
+    "url": "https://github.com/louy/gmaps-signature/issues"
+  },
+  "homepage": "https://github.com/louy/gmaps-signature#readme"
 }
