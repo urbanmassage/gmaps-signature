@@ -1,6 +1,6 @@
 {
   "name": "gmaps-signature",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Signs Google Maps requests. Works with both general and Google Maps for Work.",
   "main": "index.js",
   "directories": {
