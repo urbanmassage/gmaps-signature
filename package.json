@@ -31,10 +31,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/louy/gmaps-signature.git"
+    "url": "git+https://github.com/urbanmassage/gmaps-signature.git"
   },
   "bugs": {
-    "url": "https://github.com/louy/gmaps-signature/issues"
+    "url": "https://github.com/urbanmassage/gmaps-signature/issues"
   },
-  "homepage": "https://github.com/louy/gmaps-signature#readme"
+  "homepage": "https://github.com/urbanmassage/gmaps-signature#readme"
 }
