@@ -45,5 +45,21 @@ describe('gmaps-signature', function() {
       var expected = url + '&' + qs.stringify({ 'client': GS.GMAPS_CLIENT_ID, 'signature':  signature });
       assert.equal(signed, expected, 'url is as expected');
     });
+
+    it('should escape correctly', function() {
+      GS.GMAPS_CLIENT_ID = 'clientID';
+      GS.GMAPS_PRIVATE_KEY = 'vNIXE0xscrmjlyV-12Nj_BvUPaw=';
+
+      var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=New+York+City';
+      var signed = GS.sign(url);
+      var signature = 'r-n4bzIhWIAZHtpPTGIM-vO-QfY='; // 3 dashes
+
+      var generatedSignature = signed.split('signature=')[1];
+
+      assert.equal(generatedSignature, encodeURIComponent(signature), 'contains expected signature');
+
+      var expected = url + '&' + qs.stringify({ 'client': GS.GMAPS_CLIENT_ID, 'signature':  signature });
+      assert.equal(signed, expected, 'url is as expected');
+    });
   });
 });
