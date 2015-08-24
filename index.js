@@ -25,13 +25,13 @@ function signGMapsRequest(url) {
   // https://developers.google.com/maps/documentation/business/webservices/auth
 
   // decode key
-  var key = new Buffer( PKEY.replace('-', '+').replace('_', '/'), 'base64');
+  var key = new Buffer( PKEY.replace(/-/g, '+').replace(/_/g, '/'), 'base64');
 
   // generate signature
   var signature = crypto.createHmac('sha1', key).update(path).digest('base64');
 
   // encode signature
-  signature = signature.replace('+', '-').replace('/', '_');
+  signature = signature.replace(/\+/g, '-').replace(/\//g, '_');
 
   return url + '&' + qs.stringify({ 'signature': signature });
 }
