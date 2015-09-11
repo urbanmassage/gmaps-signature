@@ -12,14 +12,14 @@ function signGMapsRequest(url) {
 
   if (!CID || !PKEY) { // Not Google Maps for Work
     if (GKEY) {
-      debug.log('Adding gmaps key');
+      debug.log('Adding gmaps key', GKEY);
       url += s + qs.stringify({ 'key': GKEY });
     }
 
     return url;
   }
 
-  debug.log('Adding Google Maps for Work key');
+  debug.log('Adding Google Maps for Work key', CID);
 
   url += s + qs.stringify({ 'client': CID });
 
