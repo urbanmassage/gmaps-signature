@@ -14,6 +14,8 @@ function signGMapsRequest(url) {
     if (GKEY) {
       debug.log('Adding gmaps key', GKEY);
       url += s + qs.stringify({ 'key': GKEY });
+    } else {
+      debug.log('No keys were provided');
     }
 
     return url;
