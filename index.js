@@ -9,11 +9,12 @@ function signGMapsRequest(url) {
 
   var s = url.indexOf('?') > -1 ? '&' : '?';
 
-  if( ! CID || ! PKEY ) { // Not Google Maps for Work
-    if( GKEY ) {
+  if (!CID || !PKEY) { // Not Google Maps for Work
+    if (GKEY) {
       // Add gmaps key
       url += s + qs.stringify({ 'key': GKEY });
     }
+
     return url;
   }
 
@@ -25,7 +26,7 @@ function signGMapsRequest(url) {
   // https://developers.google.com/maps/documentation/business/webservices/auth
 
   // decode key
-  var key = new Buffer( PKEY.replace(/-/g, '+').replace(/_/g, '/'), 'base64');
+  var key = new Buffer(PKEY.replace(/-/g, '+').replace(/_/g, '/'), 'base64');
 
   // generate signature
   var signature = crypto.createHmac('sha1', key).update(path).digest('base64');
