@@ -1,5 +1,6 @@
 var crypto = require('crypto');
 var qs = require('querystring');
+var debug = require('better-debug')('gmaps-signature', {app:false});
 
 function signGMapsRequest(url) {
   var GKEY = this.GOOGLE_API_KEY;
@@ -11,12 +12,14 @@ function signGMapsRequest(url) {
 
   if (!CID || !PKEY) { // Not Google Maps for Work
     if (GKEY) {
-      // Add gmaps key
+      debug.log('Adding gmaps key');
       url += s + qs.stringify({ 'key': GKEY });
     }
 
     return url;
   }
+
+  debug.log('Adding Google Maps for Work key');
 
   url += s + qs.stringify({ 'client': CID });
 

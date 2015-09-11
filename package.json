@@ -20,6 +20,7 @@
     "google"
   ],
   "dependencies": {
+    "better-debug": "^0.2.3",
     "crypto": "0.0.3",
     "querystring": "^0.2.0"
   },
