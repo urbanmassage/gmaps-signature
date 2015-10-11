@@ -2,7 +2,7 @@
 [![Circle CI](https://img.shields.io/circleci/project/urbanmassage/gmaps-signature.svg)](https://circleci.com/gh/urbanmassage/gmaps-signature)
 [![NPM](https://img.shields.io/npm/v/gmaps-signature.svg)](https://www.npmjs.com/package/gmaps-signature)
 [![Codecov](https://img.shields.io/codecov/c/github/urbanmassage/gmaps-signature.svg)](https://codecov.io/github/urbanmassage/gmaps-signature/)
-[![VersionEye](https://img.shields.io/versioneye/d/nodejs/gmaps-signature.svg)](https://www.versioneye.com/nodejs/gmaps-signature/)
+[![VersionEye](https://www.versioneye.com/nodejs/gmaps-signature/badge.svg)](https://www.versioneye.com/nodejs/gmaps-signature/)
 
 Signs Google Maps requests. Works with both general and Google Maps for Work.
 
