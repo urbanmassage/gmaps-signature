@@ -10,7 +10,9 @@ Signs Google Maps requests. Works with both general and Google Maps for Work.
 
 With npm...
 
-`npm install --save gmaps-signature`
+```
+npm install --save gmaps-signature
+```
 
 ## Usage
 
@@ -26,4 +28,13 @@ GS.GMAPS_PRIVATE_KEY = 'MY PRIVATE KEY';
 
 // and then you can start signing urls...
 var url = GS.sign('https://maps.googleapis.com/maps/api/geocode/json?address=New+York');
+```
+
+### Env variables
+
+You can also set the required keys using env variables. Like so:
+
+```
+GOOGLE_API_KEY=THIS_IS_MY_KEY node .
+GMAPS_CLIENT_ID=THIS_IS_MY_ID GMAPS_PRIVATE_KEY=THIS_IS_MY_PK node .
 ```

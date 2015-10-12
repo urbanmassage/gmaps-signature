@@ -55,4 +55,9 @@ function createInstance() {
 var instance = createInstance();
 instance.create = createInstance;
 
+// Use env variables if possible
+instance.GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
+instance.GMAPS_CLIENT_ID = process.env.GMAPS_CLIENT_ID;
+instance.GMAPS_PRIVATE_KEY = process.env.GMAPS_PRIVATE_KEY;
+
 module.exports = instance;
