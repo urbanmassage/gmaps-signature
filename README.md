@@ -1,5 +1,5 @@
 # Google Maps Signature
-[![Circle CI](https://img.shields.io/circleci/project/urbanmassage/gmaps-signature.svg)](https://circleci.com/gh/urbanmassage/gmaps-signature)
+[![Travis CI](https://img.shields.io/travis/urbanmassage/gmaps-signature.svg)](https://travis-ci.org/urbanmassage/gmaps-signature)
 [![NPM](https://img.shields.io/npm/v/gmaps-signature.svg)](https://www.npmjs.com/package/gmaps-signature)
 [![Codecov](https://img.shields.io/codecov/c/github/urbanmassage/gmaps-signature.svg)](https://codecov.io/github/urbanmassage/gmaps-signature/)
 [![VersionEye](https://www.versioneye.com/nodejs/gmaps-signature/badge.svg)](https://www.versioneye.com/nodejs/gmaps-signature/)
