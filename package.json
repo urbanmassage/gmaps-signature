@@ -11,6 +11,13 @@
     "coverage": "istanbul cover _mocha",
     "sendcoverage": "if [ -f coverage/lcov.info ]; then cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js; fi"
   },
+
+  "build": {
+   "typings": "typings install && typings prune",
+   "build": "tsc -p .",
+ },
+
+
   "author": "Louay Alakkad <louay@alakkad.me>",
   "license": "LGPL-3.0",
   "keywords": [
