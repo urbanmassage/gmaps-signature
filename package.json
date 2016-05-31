@@ -27,7 +27,8 @@
   "devDependencies": {
     "codecov.io": "^0.1.6",
     "istanbul": "^0.4.1",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "typings": "^1.0.4"
   },
   "repository": {
     "type": "git",

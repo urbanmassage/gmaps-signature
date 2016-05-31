@@ -1,1 +1,13 @@
-{}
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "declaration": true
+  },
+  "exclude": [
+    "*.d.ts",
+    "node_modules"
+  ]
+}
