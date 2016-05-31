@@ -2,7 +2,6 @@ var assert = require('assert');
 var qs = require('querystring');
 
 /* jshint mocha: true */
-
 describe('gmaps-signature', function() {
 
   var GS = require('..');
