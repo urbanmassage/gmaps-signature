@@ -61,7 +61,6 @@ export function create(): Instance {
 
 const instance = create();
 
-
 // Use env variables if possible
 instance.GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 instance.GMAPS_CLIENT_ID = process.env.GMAPS_CLIENT_ID;
