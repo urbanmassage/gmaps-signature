@@ -26,6 +26,13 @@ describe('gmaps-signature', function() {
       assert.equal(GS.sign(url), url + '&key=' + GS.GOOGLE_API_KEY, 'add\s google api key');
     });
 
+    it('adds google key when there isn\'t a querystring', function() {
+      GS.GOOGLE_API_KEY = 'GOOGLE_KEY';
+
+      var url = 'https://maps.googleapis.com/maps/api/geocode/json';
+      assert.equal(GS.sign(url), url + '?key=' + GS.GOOGLE_API_KEY, 'add\s google api key');
+    });
+
     it('should sign correctly', function() {
       // @see https://developers.google.com/maps/documentation/business/webservices/auth
       GS.GMAPS_CLIENT_ID = 'clientID';
