@@ -24,8 +24,7 @@
     "google"
   ],
   "dependencies": {
-    "debug": "^2.2.0",
-    "querystring": "^0.2.0"
+    "debug": "^2.2.0"
   },
   "devDependencies": {
     "codecov.io": "^0.1.6",
