@@ -7,6 +7,7 @@
     "test": "test"
   },
   "scripts": {
+    "preversion": "npm run build -- --declaration && npm test",
     "test": "mocha",
     "coverage": "istanbul cover _mocha",
     "sendcoverage": "if [ -f coverage/lcov.info ]; then cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js; fi",
