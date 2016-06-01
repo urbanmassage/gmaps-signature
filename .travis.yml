@@ -9,6 +9,8 @@ node_js:
   - "0.10"
 
 script:
+  - npm run typings
+  - npm run build -- --declaration
   - npm test
 
 after_success:

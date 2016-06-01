@@ -1,12 +1,9 @@
-var assert = require('assert');
-var qs = require('querystring');
+import assert = require('assert');
+import qs = require('querystring');
+import GS from '../index';
 
 /* jshint mocha: true */
-
 describe('gmaps-signature', function() {
-
-  var GS = require('..');
-
   describe('#sign', function() {
     after(function() {
       // Reset config
@@ -27,6 +24,13 @@ describe('gmaps-signature', function() {
 
       var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=New+York';
       assert.equal(GS.sign(url), url + '&key=' + GS.GOOGLE_API_KEY, 'add\s google api key');
+    });
+
+    it('adds google key when there isn\'t a querystring', function() {
+      GS.GOOGLE_API_KEY = 'GOOGLE_KEY';
+
+      var url = 'https://maps.googleapis.com/maps/api/geocode/json';
+      assert.equal(GS.sign(url), url + '?key=' + GS.GOOGLE_API_KEY, 'add\s google api key');
     });
 
     it('should sign correctly', function() {

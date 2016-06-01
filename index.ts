@@ -2,7 +2,7 @@ var crypto = require('crypto');
 var qs = require('querystring');
 var debug = require('debug')('gmaps-signature');
 
-function signGMapsRequest(url) {
+function signGMapsRequest(url: string): string {
   var GKEY = this.GOOGLE_API_KEY;
 
   var CID = this.GMAPS_CLIENT_ID;
@@ -42,7 +42,14 @@ function signGMapsRequest(url) {
   return url + '&' + qs.stringify({ 'signature': signature });
 }
 
-function createInstance() {
+export interface Instance {
+  sign(url: string): string;
+  GOOGLE_API_KEY: string;
+  GMAPS_CLIENT_ID: string;
+  GMAPS_PRIVATE_KEY: string;
+}
+
+export function create(): Instance {
   // Returns a new instance.
   return {
     sign: signGMapsRequest,
@@ -52,12 +59,11 @@ function createInstance() {
   };
 }
 
-var instance = createInstance();
-instance.create = createInstance;
+const instance = create();
 
 // Use env variables if possible
 instance.GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 instance.GMAPS_CLIENT_ID = process.env.GMAPS_CLIENT_ID;
 instance.GMAPS_PRIVATE_KEY = process.env.GMAPS_PRIVATE_KEY;
 
-module.exports = instance;
+export default instance;

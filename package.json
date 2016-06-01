@@ -9,7 +9,10 @@
   "scripts": {
     "test": "mocha",
     "coverage": "istanbul cover _mocha",
-    "sendcoverage": "if [ -f coverage/lcov.info ]; then cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js; fi"
+    "sendcoverage": "if [ -f coverage/lcov.info ]; then cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js; fi",
+    "postcoverage": "if [ -f coverage/lcov.info ]; then node node_modules/.bin/map-coverage && mv coverage/lcov.info coverage/lcov-raw.info && mv coverage/lcov-mapped.info coverage/lcov.info; fi",
+    "typings": "typings install && typings prune",
+    "build": "tsc -p ."
   },
   "author": "Louay Alakkad <louay@alakkad.me>",
   "license": "LGPL-3.0",
@@ -21,13 +24,15 @@
     "google"
   ],
   "dependencies": {
-    "debug": "^2.2.0",
-    "querystring": "^0.2.0"
+    "debug": "^2.2.0"
   },
   "devDependencies": {
     "codecov.io": "^0.1.6",
     "istanbul": "^0.4.1",
-    "mocha": "^2.3.4"
+    "map-coverage": "0.0.3",
+    "mocha": "^2.3.4",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
   },
   "repository": {
     "type": "git",
