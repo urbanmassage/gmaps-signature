@@ -10,7 +10,7 @@ node_js:
 
 script:
   - npm run typings
-  - npm run build
+  - npm run build -- --declaration
   - npm test
 
 after_success:

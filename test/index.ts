@@ -1,11 +1,9 @@
-var assert = require('assert');
-var qs = require('querystring');
+import assert = require('assert');
+import qs = require('querystring');
+import GS from '../index';
 
 /* jshint mocha: true */
 describe('gmaps-signature', function() {
-
-  var GS = require('..');
-
   describe('#sign', function() {
     after(function() {
       // Reset config
