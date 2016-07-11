@@ -18,7 +18,7 @@ npm install --save gmaps-signature
 
 ```js
 // Load the module
-var GS = require('gmaps-signature');
+import GS from 'gmaps-signature';
 
 // Add your Google Maps key
 GS.GOOGLE_API_KEY = 'MY KEY';
