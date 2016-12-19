@@ -33,7 +33,7 @@
     "map-coverage": "0.0.3",
     "mocha": "^3.0.1",
     "typescript": "^1.8.10",
-    "typings": "^1.0.4"
+    "typings": "^2.1.0"
   },
   "repository": {
     "type": "git",
